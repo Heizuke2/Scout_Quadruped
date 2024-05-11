@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="scout_robot_description">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0210580748414876 0.00207440239951867 0.0661360300196389"
+        rpy="0 0 0" />
+      <mass
+        value="6.41366184598262" />
+      <inertia
+        ixx="0.0682915404686814"
+        ixy="1.65600536965895E-17"
+        ixz="1.18462098502104E-18"
+        iyy="0.104448333749456"
+        iyz="1.15253850503895E-08"
+        izz="0.156283019646088" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="front_left_hip_link">
+    <inertial>
+      <origin
+        xyz="-0.0136715815108775 -0.00161098936779762 -5.53579979546935E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.299935158686972" />
+      <inertia
+        ixx="0.000193007346965068"
+        ixy="-4.83145045223389E-07"
+        ixz="4.12208118983272E-07"
+        iyy="0.000268683962581779"
+        iyz="-3.64075905619963E-07"
+        izz="0.00018657323874084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.28882 0.067155 0.0515"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.04"
+      upper="1.04"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_left_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00181009683608957 -0.0204754274677028 -0.0466123528877474"
+        rpy="0 0 0" />
+      <mass
+        value="0.790558612356665" />
+      <inertia
+        ixx="0.00222924539321048"
+        ixy="2.6609052113765E-06"
+        ixz="-6.80725337803206E-05"
+        iyy="0.00252347799404171"
+        iyz="6.62069662557934E-05"
+        izz="0.000480463410180852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.01 0.11015 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_hip_link" />
+    <child
+      link="front_left_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="2.59"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_left_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0121395770591203 1.44754320910156E-05 -0.0971781035069053"
+        rpy="0 0 0" />
+      <mass
+        value="0.136777572247688" />
+      <inertia
+        ixx="0.000580208345943688"
+        ixy="8.95757271481114E-16"
+        ixz="8.29184319492175E-06"
+        iyy="0.000592884110471787"
+        iyz="5.10359671002319E-15"
+        izz="1.60106073098899E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0077812 0 -0.19985"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_upper_leg_link" />
+    <child
+      link="front_left_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.9"
+      upper="1.57"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_left_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00306014620163719 -9.22305698677905E-06 -0.00126595869841112"
+        rpy="0 0 0" />
+      <mass
+        value="0.0554718524709599" />
+      <inertia
+        ixx="1.77946603925049E-05"
+        ixy="-3.52982815343748E-08"
+        ixz="6.02886626053331E-06"
+        iyy="2.13122742969903E-05"
+        iyz="6.55398837654116E-08"
+        izz="2.06513838755981E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.011199171847237 0 -0.209761807091393"
+      rpy="0 0 0" />
+    <parent
+      link="front_left_lower_leg_link" />
+    <child
+      link="front_left_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_left_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0136715815108775 -0.00161098936779754 5.53579979545877E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.299935158686972" />
+      <inertia
+        ixx="0.000193007346965068"
+        ixy="4.83145045223459E-07"
+        ixz="4.12208118983296E-07"
+        iyy="0.000268683962581779"
+        iyz="3.64075905620102E-07"
+        izz="0.00018657323874084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.330780215437656 0.0671546202239636 0.0514999999999987"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.04"
+      upper="1.04"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_left_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00181009683608946 -0.0204754274677029 -0.0466123528877473"
+        rpy="0 0 0" />
+      <mass
+        value="0.790558612356665" />
+      <inertia
+        ixx="0.00222924539321048"
+        ixy="2.66090521137638E-06"
+        ixz="-6.80725337803169E-05"
+        iyy="0.0025234779940417"
+        iyz="6.62069662557913E-05"
+        izz="0.000480463410180852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.01 0.11015 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_hip_link" />
+    <child
+      link="rear_left_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="2.59"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_left_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.0121395770591199 1.44754320908769E-05 -0.0971781035069055"
+        rpy="0 0 0" />
+      <mass
+        value="0.136777572247688" />
+      <inertia
+        ixx="0.000580208345943687"
+        ixy="8.95756966801722E-16"
+        ixz="8.29184319492286E-06"
+        iyy="0.000592884110471786"
+        iyz="5.10305552360493E-15"
+        izz="1.60106073098899E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0077812 0 -0.19985"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_upper_leg_link" />
+    <child
+      link="rear_left_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.9"
+      upper="1.57"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_left_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00306014620163331 -9.2230569867513E-06 -0.00126595869841384"
+        rpy="0 0 0" />
+      <mass
+        value="0.0554718524709602" />
+      <inertia
+        ixx="1.7794660392505E-05"
+        ixy="-3.52982815343514E-08"
+        ixz="6.02886626053341E-06"
+        iyy="2.13122742969906E-05"
+        iyz="6.5539883765423E-08"
+        izz="2.06513838755982E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_left_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0111991718472406 0 -0.20976180709139"
+      rpy="0 0 0" />
+    <parent
+      link="rear_left_lower_leg_link" />
+    <child
+      link="rear_left_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="front_right_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0525807769097344 0.00161098936779754 5.53579979545643E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.299935158686972" />
+      <inertia
+        ixx="0.000193007346965068"
+        ixy="4.83145045223497E-07"
+        ixz="-4.12208118983281E-07"
+        iyy="0.000268683962581779"
+        iyz="-3.64075905620148E-07"
+        izz="0.00018657323874084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_hip_joint"
+    type="revolute">
+    <origin
+      xyz="0.22257 -0.062845 0.0515"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.04"
+      upper="1.04"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_right_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="0.0018100968360894 0.0204754274677027 -0.0466123528877474"
+        rpy="0 0 0" />
+      <mass
+        value="0.790558612356664" />
+      <inertia
+        ixx="0.00222924539321048"
+        ixy="2.66090521137632E-06"
+        ixz="6.80725337803169E-05"
+        iyy="0.00252347799404171"
+        iyz="-6.62069662557909E-05"
+        izz="0.000480463410180852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.056252 -0.11015 0"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_hip_link" />
+    <child
+      link="front_right_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="2.59"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_right_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00925906439833429 1.44754320910156E-05 -0.0974947325685236"
+        rpy="0 0 0" />
+      <mass
+        value="0.136777572247688" />
+      <inertia
+        ixx="0.000579224012824204"
+        ixy="-1.07232572226566E-15"
+        ixz="2.49628855412226E-05"
+        iyy="0.000592884110471786"
+        iyz="-5.0688803258427E-15"
+        izz="1.69949404293728E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_lower_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.0077812 0 -0.19985"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_upper_leg_link" />
+    <child
+      link="front_right_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.9"
+      upper="1.57"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="front_right_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00302135244341412 -9.22305743639162E-06 -0.00135594439010989"
+        rpy="0 0 0" />
+      <mass
+        value="0.0554718518464109" />
+      <inertia
+        ixx="1.7440564934931E-05"
+        ixy="-3.72233395755872E-08"
+        ixz="5.93382413837145E-06"
+        iyy="2.13122695220571E-05"
+        iyz="6.44672665298965E-08"
+        izz="2.1005474458106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/front_right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00498806894979309 0 -0.210001324596927"
+      rpy="0 0 0" />
+    <parent
+      link="front_right_lower_leg_link" />
+    <child
+      link="front_right_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="rear_right_hip_link">
+    <inertial>
+      <origin
+        xyz="0.0136715815108775 0.00161098936779754 -5.53579979545287E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.299935158686972" />
+      <inertia
+        ixx="0.000193007346965068"
+        ixy="-4.83145045223568E-07"
+        ixz="-4.12208118983317E-07"
+        iyy="0.000268683962581779"
+        iyz="3.64075905620301E-07"
+        izz="0.00018657323874084" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_hip_joint"
+    type="revolute">
+    <origin
+      xyz="-0.33078 -0.062845 0.0515"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_hip_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.04"
+      upper="1.04"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_right_upper_leg_link">
+    <inertial>
+      <origin
+        xyz="0.00181009683608929 0.0204754274677029 -0.0466123528877474"
+        rpy="0 0 0" />
+      <mass
+        value="0.790558612356664" />
+      <inertia
+        ixx="0.00222924539321048"
+        ixy="2.66090521137605E-06"
+        ixz="6.80725337803162E-05"
+        iyy="0.0025234779940417"
+        iyz="-6.62069662557928E-05"
+        izz="0.000480463410180852" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_upper_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_upper_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_upper_leg_joint"
+    type="revolute">
+    <origin
+      xyz="0.01 -0.11015 0"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_hip_link" />
+    <child
+      link="rear_right_upper_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.57"
+      upper="2.59"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_right_lower_leg_link">
+    <inertial>
+      <origin
+        xyz="-0.00925906439833418 1.44754320910156E-05 -0.0974947325685236"
+        rpy="0 0 0" />
+      <mass
+        value="0.136777572247688" />
+      <inertia
+        ixx="0.000579224012824205"
+        ixy="-1.07231999040118E-15"
+        ixz="2.49628855412226E-05"
+        iyy="0.000592884110471787"
+        iyz="-5.06942430091936E-15"
+        izz="1.69949404293729E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_lower_leg_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_lower_leg_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_lower_leg_link"
+    type="revolute">
+    <origin
+      xyz="0.0077812 0 -0.19985"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_upper_leg_link" />
+    <child
+      link="rear_right_lower_leg_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.9"
+      upper="1.57"
+      effort="4"
+      velocity="4" />
+  </joint>
+  <link
+    name="rear_right_foot_link">
+    <inertial>
+      <origin
+        xyz="-0.00302135244340956 -9.22305743641938E-06 -0.00135594439011244"
+        rpy="0 0 0" />
+      <mass
+        value="0.0554718518464106" />
+      <inertia
+        ixx="1.74405649349309E-05"
+        ixy="-3.72233395755566E-08"
+        ixz="5.93382413837149E-06"
+        iyy="2.13122695220572E-05"
+        iyz="6.44672665298843E-08"
+        izz="2.10054744581059E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_foot_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scout_robot_description/meshes/rear_right_foot_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_foot_joint"
+    type="fixed">
+    <origin
+      xyz="-0.00498806894979753 0 -0.210001324596924"
+      rpy="0 0 0" />
+    <parent
+      link="rear_right_lower_leg_link" />
+    <child
+      link="rear_right_foot_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
